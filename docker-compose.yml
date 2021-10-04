@@ -1,0 +1,19 @@
+services:
+  web:
+    build: .
+    ports:
+      - "5000:5000"
+    environment:
+      FLASK_ENV: development
+      FLASK_APP: views.py
+      APP_DEBUG: "True"
+    links:
+     - mongo
+  mongo:
+    image: mongo
+    restart: always
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: useradmin
+      MONGO_INITDB_ROOT_PASSWORD: thepianohasbeendrinking
+    volumes:
+      - E:\learn\mongo\code\mongo-volumes:/data/db
