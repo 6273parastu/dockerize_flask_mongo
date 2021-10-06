@@ -13,7 +13,7 @@ app = Flask(__name__)
 
 @app.route('/insert')
 def index():
-    user = {'status':'1', 'email':'parastu@gmail.com' ,'mobile':'09196410501' ,'last_name':'barzini' ,'first_name': 'parastu'}
+    user = {'status':'1', 'email':'parastu@gmail.com' ,'mobile':'0912000000' ,'last_name':'barzini' ,'first_name': 'parastu'}
     user_id = db.users.insert_one(user).inserted_id
     return f'hello  {user_id}'
 
