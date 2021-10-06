@@ -5,8 +5,8 @@ from pymongo import MongoClient
 client = MongoClient(
     port=27017,
     host='host.docker.internal',
-    username='useradmin',
-    password='thepianohasbeendrinking')
+    username='root',
+    password='secret')
 
 db = client['parastu']
 app = Flask(__name__)
